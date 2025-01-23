@@ -1,0 +1,151 @@
+/* Общие стили (обнуление) */
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+*:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Контейнер */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-shadow: 0px -2px 0px 0px #EFF2F2 inset;
+}
+
+/* Шапка */
+.header {
+  background-color: #fff;
+  border-bottom: 1px solid #EFF2F2;
+}
+
+.headerinner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  min-height: 76px;
+}
+
+.logo img {
+  height: 40px;
+}
+
+/* Меню */
+.menu {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  gap: 30px;
+}
+
+.menulist {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.menulink {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary, #333);
+  transition: color 0.3s;
+}
+
+.menulink:hover {
+  color: var(--main-03-b-2-a-5, #03B2A5);
+}
+
+/* Кнопка */
+.header__inner-button {
+  color: var(--main-03-b-2-a-5, #03B2A5);
+  font-size: 16px;
+  font-weight: 700;
+  padding: 12px 20px;
+  border-radius: 4px;
+  background: #E3F5F5;
+  margin-left: 50px;
+  min-width: 230px;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.header__inner-button:hover {
+  background-color: var(--main-03-b-2-a-5, #03B2A5);
+  color: #fff;
+}
+
+/* Адаптивность */
+@media (max-width: 992px) {
+  .headerinner {
+    flex-wrap: wrap;
+  }
+
+  .menu {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .header__inner-button {
+    margin-left: 0;
+    margin-top: 15px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .menulist {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .menulink {
+    font-size: 14px;
+  }
+
+  .header__inner-button {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+
+  .logo img {
+    height: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .headerinner {
+    padding: 15px 0;
+  }
+
+  .menulink {
+    font-size: 12px;
+  }
+
+  .header__inner-button {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+}
